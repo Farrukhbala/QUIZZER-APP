@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+
+
+
+
+
+    <title>QuiZZer</title>
+
+
+
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <h1>QuiZZer</h1>
+
+
+
+        <ul class="navbar">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+        <h2 id="UserID"></h2>
+
+    </header>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Questions</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+                <th>Correct or Wrong</th>
+
+            </tr>
+
+
+        </thead>
+        <tbody>
+
+            <tr>
+                <th id="Q1"></th>
+                <th id="UserAns1"></th>
+                <th id="Ans1"></th>
+                <th id="True1"></th>
+            </tr>
+            <tr>
+                <th id="Q2"></th>
+                <th id="UserAns2"></th>
+                <th id="Ans2"></th>
+                <th id="True2"></th>
+
+            </tr>
+            <tr>
+                <th id="Q3"></th>
+                <th id="UserAns3"></th>
+                <th id="Ans3"></th>
+                <th id="True3"></th>
+
+            </tr>
+            <tr>
+                <th id="Q4"></th>
+                <th id="UserAns4"></th>
+                <th id="Ans4"></th>
+                <th id="True4"></th>
+
+            </tr>
+            <tr>
+                <th id="Q5"></th>
+                <th id="UserAns5"></th>
+                <th id="Ans5"></th>
+                <th id="True5"></th>
+
+            </tr>
+            <tr>
+                <th id="Q6"></th>
+                <th id="UserAns6"></th>
+                <th id="Ans6"></th>
+                <th id="True6"></th>
+
+            </tr>
+            <tr>
+                <th id="Q7"></th>
+                <th id="UserAns7"></th>
+                <th id="Ans7"></th>
+                <th id="True7"></th>
+
+            </tr>
+            <tr>
+                <th id="Q8"></th>
+                <th id="UserAns8"></th>
+                <th id="Ans8"></th>
+                <th id="True8"></th>
+
+            </tr>
+
+
+
+
+
+        </tbody>
+        <tfoot>
+
+            <tr>
+                <th></th>
+                <th></th>
+
+
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+
+
+
+</body>
+<script>
+
+    var user = document.getElementById('UserID').innerHTML = "WELCOME  " + prompt("Enter Your Name ");
+
+    var questions = ['7 * 8 = ?', ' 75 / 5 = ?', '57 + 9 = ?', ' 91 - 90 = ? ', '72 / 9 = ?', '43 + 9 = ?', '32 - 23 = ?', '44 + 23 = ?', '56 - 3 = ?'];
+
+    var Answers = ['56', '15', '66', '1', '8', '52', '9', '67', '53'];
+
+
+
+    //LOOP FOR PRINTING QUESTIONS
+
+
+    for (let i = 1; i < questions.length; i++) {
+
+        document.getElementById('Q' + String(i)).innerHTML = questions[parseInt(i)];
+    }
+
+    //LOOP FOR PRINTING ANSWERS
+
+
+    for (let i = 1; i < questions.length; i++) {
+
+        document.getElementById('Ans' + String(i)).innerHTML = Answers[parseInt(i)];
+    }
+
+
+    //LOOP FOR PRINTING USER'S ANSWERS
+    for (let i = 1; i < questions.length; i++) {
+
+        document.getElementById('UserAns' + String(i)).innerHTML = prompt(questions[parseInt(i)]);
+
+    }
+
+
+    // for (let i = 1; i < Answers.length; i++) {
+
+        if (document.getElementById(String('UserAns1')).value === String(Answers[1])) 
+        {
+
+            document.getElementById('True1').innerHTML = "Correct";
+        }
+        else {
+            document.getElementById('True1').innerHTML = "InCorrect";
+        }
+
+
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // document.getElementById('Q2').innerHTML = questions[1]
+    // document.getElementById('Q3').innerHTML = questions[2]
+    // document.getElementById('Q4').innerHTML = questions[3]
+    // document.getElementById('Q5').innerHTML = questions[4]
+    // document.getElementById('Q6').innerHTML = questions[5]
+    // document.getElementById('Q7').innerHTML = questions[6]
+    // document.getElementById('Q8').innerHTML = questions[7]
+
+    // document.getElementById('Q9').innerHTML = questions[8]
+    // document.getElementById('Ans1').innerHTML = Answers[0]
+    // document.getElementById('Ans2').innerHTML = Answers[1]
+    // document.getElementById('Ans3').innerHTML = Answers[2]
+    // document.getElementById('Ans4').innerHTML = Answers[3]
+    // document.getElementById('Ans5').innerHTML = Answers[4]
+    // document.getElementById('Ans6').innerHTML = Answers[5]
+    // document.getElementById('Ans7').innerHTML = Answers[6]
+    // document.getElementById('Ans8').innerHTML = Answers[7]
+
+
+
+    // document.getElementById('User-Ans1').innerHTML = prompt(questions[0])
+    // document.getElementById('User-Ans2').innerHTML = prompt(questions[1])
+    // document.getElementById('User-Ans3').innerHTML = prompt(questions[2])
+    // document.getElementById('User-Ans4').innerHTML = prompt(questions[3])
+    // document.getElementById('User-Ans5').innerHTML = prompt(questions[4])
+    // document.getElementById('User-Ans6').innerHTML = prompt(questions[5])
+    // document.getElementById('User-Ans7').innerHTML = prompt(questions[6])
+    // document.getElementById('User-Ans8').innerHTML = prompt(questions[7])
+
+
+
+
+
+
+</script>
+
+</html>
