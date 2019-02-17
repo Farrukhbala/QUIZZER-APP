@@ -167,21 +167,25 @@
 
     }
 
+    var percentage = 0;
 
-    // for (let i = 1; i < Answers.length; i++) {
+    for (let i = 1; i < Answers.length; i++) {
 
-        if (document.getElementById(String('UserAns1')).value === String(Answers[1])) 
+        if (document.getElementById(String('UserAns' + String(i))).innerHTML === String(Answers[i])) 
         {
 
-            document.getElementById('True1').innerHTML = "Correct";
+            document.getElementById('True' + String(i)).innerHTML = "Correct";
+
+        percentage += 1
         }
         else {
-            document.getElementById('True1').innerHTML = "InCorrect";
+            document.getElementById('True' + String(i)).innerHTML = "InCorrect";
         }
+    }
 
 
-    // }
-
+        alert(percentage / 10 * 100);
+   
 
 
 
